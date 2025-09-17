@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<section id="skills" class="section animate-on-scroll"><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -109,16 +109,53 @@
             animation: fadeInUp 1s ease;
         }
 
+        .hero-profile {
+            margin-bottom: 40px;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 30px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a6f);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 20px 40px rgba(238, 90, 111, 0.3);
+            transition: all 0.3s ease;
+            border: 4px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05) rotate(5deg);
+            box-shadow: 0 25px 50px rgba(238, 90, 111, 0.4);
+        }
+
+        .profile-image i {
+            font-size: 4rem;
+            color: white;
+        }
+
         .hero h1 {
             font-size: 4rem;
             font-weight: 800;
             color: white;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
             background: linear-gradient(45deg, #fff, #f0f0f0);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         .hero p {
@@ -164,7 +201,129 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
         }
 
-        /* Sections */
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .about-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .about-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-icon {
+            font-size: 3rem;
+            color: #ff6b6b;
+            margin-bottom: 20px;
+        }
+
+        .about-card h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .about-details {
+            text-align: left;
+        }
+
+        .detail-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .detail-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 500;
+        }
+
+        .detail-value {
+            color: white;
+            font-weight: 600;
+        }
+
+        .education-timeline {
+            text-align: left;
+        }
+
+        .education-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            border-left: 4px solid #ff6b6b;
+        }
+
+        .education-year {
+            color: #ff6b6b;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        .education-degree {
+            color: white;
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+
+        .education-status {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        .learning-info p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .learning-platforms {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+        }
+
+        .platform-tag {
+            background: rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.9);
+            padding: 10px 15px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .platform-tag:hover {
+            background: rgba(255, 107, 107, 0.2);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .platform-tag i {
+            color: #ff6b6b;
+        }
         .section {
             margin-bottom: 80px;
             animation: fadeInUp 1s ease;
@@ -427,6 +586,7 @@
     <nav class="navbar">
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -435,12 +595,18 @@
 
     <div class="container">
         <section id="home" class="hero">
-            <h1>Full Stack Developer</h1>
-            <p>Crafting digital experiences with modern technologies and innovative solutions</p>
+            <div class="hero-profile">
+                <div class="profile-image">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <h1>Shahal UV</h1>
+                <div class="hero-subtitle">Full Stack Developer</div>
+                <p>Crafting digital experiences with modern technologies and innovative solutions</p>
+            </div>
             <div class="hero-cta">
-                <a href="#projects" class="btn btn-primary">
-                    <i class="fas fa-rocket"></i>
-                    View Projects
+                <a href="#about" class="btn btn-primary">
+                    <i class="fas fa-user"></i>
+                    About Me
                 </a>
                 <a href="#contact" class="btn btn-secondary">
                     <i class="fas fa-envelope"></i>
@@ -449,7 +615,83 @@
             </div>
         </section>
 
-        <section id="skills" class="section animate-on-scroll">
+        <section id="about" class="section animate-on-scroll">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Personal Info</h3>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Name:</span>
+                            <span class="detail-value">Shahal UV</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Age:</span>
+                            <span class="detail-value">21 Years</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Location:</span>
+                            <span class="detail-value">Kerala, India</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Education</h3>
+                    <div class="education-timeline">
+                        <div class="education-item">
+                            <div class="education-year">2023 - 2026</div>
+                            <div class="education-degree">BSc Computer Science</div>
+                            <div class="education-status">Currently Studying</div>
+                        </div>
+                        <div class="education-item">
+                            <div class="education-year">2021 - 2023</div>
+                            <div class="education-degree">Higher Secondary (+2)</div>
+                            <div class="education-status">Completed</div>
+                        </div>
+                        <div class="education-item">
+                            <div class="education-year">2021</div>
+                            <div class="education-degree">Secondary Education (10th)</div>
+                            <div class="education-status">Completed</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Learning Journey</h3>
+                    <div class="learning-info">
+                        <p>Self-taught developer with expertise gained through various online platforms and hands-on project experience.</p>
+                        <div class="learning-platforms">
+                            <div class="platform-tag">
+                                <i class="fab fa-youtube"></i>
+                                YouTube Tutorials
+                            </div>
+                            <div class="platform-tag">
+                                <i class="fas fa-book"></i>
+                                Online Courses
+                            </div>
+                            <div class="platform-tag">
+                                <i class="fas fa-code"></i>
+                                Practice Projects
+                            </div>
+                            <div class="platform-tag">
+                                <i class="fab fa-github"></i>
+                                Open Source
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
             <h2 class="section-title">Technical Expertise</h2>
             <div class="skills-grid">
                 <div class="skill-category">
