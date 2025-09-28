@@ -777,4 +777,94 @@
         </p>
         
         <div class="contact-grid">
-            <div class="contact-
+            <div class="contact-card">
+                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                <h3 class="contact-title">Email</h3>
+                <a href="mailto:shahaluv12@gmail.com" class="contact-link">shahaluv12@gmail.com</a>
+            </div>
+            
+            <div class="contact-card">
+                <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                <h3 class="contact-title">Phone</h3>
+                <a href="tel:+917012091514" class="contact-link">+91 70120 91514</a>
+            </div>
+            
+            <div class="contact-card">
+                <div class="contact-icon"><i class="fab fa-github"></i></div>
+                <h3 class="contact-title">GitHub</h3>
+                <a href="#" class="contact-link">github.com/shahaluv</a>
+            </div>
+            
+            <div class="contact-card">
+                <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+                <h3 class="contact-title">LinkedIn</h3>
+                <a href="#" class="contact-link">linkedin.com/in/shahaluv</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Shahal UV. Crafted with passion and attention to detail.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Enhanced hover effects
+        document.querySelectorAll('.skill-card, .project-card, .contact-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Navigation scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.background = 'rgba(255, 255, 255, 0.08)';
+                nav.style.borderColor = 'rgba(255, 255, 255, 0.15)';
+            } else {
+                nav.style.background = 'rgba(255, 255, 255, 0.05)';
+                nav.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+            }
+        });
+
+        // Add parallax effect for background
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * -0.3;
+            document.body.style.backgroundPosition = `center ${rate}px`;
+        });
+
+        // Tech badges random glow effect
+        const techBadges = document.querySelectorAll('.tech-badge');
+        setInterval(() => {
+            const randomBadge = techBadges[Math.floor(Math.random() * techBadges.length)];
+            randomBadge.style.boxShadow = '0 0 20px rgba(59, 130, 246, 0.5)';
+            randomBadge.style.borderColor = 'var(--accent-primary)';
+            
+            setTimeout(() => {
+                randomBadge.style.boxShadow = '';
+                randomBadge.style.borderColor = '';
+            }, 2000);
+        }, 3000);
+    </script>
+</body>
+</html>
